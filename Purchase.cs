@@ -37,6 +37,7 @@ public class Purchase : MonoBehaviour
         }
         _txtCoinsInShop.text = $"{PlayerPrefsSafe.GetInt("savescoins")}";
     }
+    
     private void OnPurchaseNonConsumable(PurchaseEventArgs args)
     {
         var id = args.purchasedProduct.definition.id;
@@ -46,6 +47,7 @@ public class Purchase : MonoBehaviour
             return;
         }
     }
+    
     private void OnPurchaseSubscription(PurchaseEventArgs args)
     {
         var id = args.purchasedProduct.definition.id;
